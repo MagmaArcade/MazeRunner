@@ -65,7 +65,7 @@ namespace Maze_Runner
                 Player player = new Player(name, description);
                 Bag Bag = new Bag(new string[] { "small", "cloth", "bag" }, "bag", "A small cloth bag endorned with a 6-petal star atop a circle.");
 
-                Item Portion = new Item(new string[] { "portion" }, "red", "A small healing item");
+                Item Potion = new Item(new string[] { "potion" }, "red", "A small healing item");
                 Item Gem = new Item(new string[] { "gem" }, "phosphophyllite", "An emerald-green gem of about three-and-a-half hardness. Pretty.");
                 Item Map = new Item(new string[] { "map" }, "world map", "the world map of this game, help you to find the true way.");
                 Item Longsword = new Item(new string[] { "Longsword" }, "Long", "a popular weapon for a knight");
