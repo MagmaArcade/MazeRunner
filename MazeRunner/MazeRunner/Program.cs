@@ -69,7 +69,7 @@ namespace Maze_Runner
                 Item Gem = new Item(new string[] { "gem" }, "phosphophyllite", "An emerald-green gem of about three-and-a-half hardness. Pretty.");
                 Item Map = new Item(new string[] { "map" }, "world map", "the world map of this game, help you to find the true way.");
                 Item Longsword = new Item(new string[] { "Longsword" }, "Long", "a popular weapon for a knight");
-                Item ArmorTable = new Item(new string[] { "ArmorTable" }, "Armor", "Find suitable armor");
+                Item Armor = new Item(new string[] { "Armor" }, "Armor", "sturdy armor");
                 Item Bot = new Item(new string[] { "bot" }, "bot", "Monster bots");
 
                 Location WeaponRoom = new Location("WeaponRoom", "You're in weapon room where you can attach for youself some usefull equipments " +
@@ -82,21 +82,25 @@ namespace Maze_Runner
                 Path WroomtoBroom = new Path(new string[] { "south" }, "Bot Room Entrance", "Go to Bot Room", WeaponRoom, BotRoom);
                 Path ProomtoFroom = new Path(new string[] { "west" }, "Arena Entrance", "Go to Fight Arena", PraticeRoom, FightArena);
 
+                Path ProomtoWroom = new Path(new string[] { "south" }, "Weapon Room Enterence", "Go to weapon room", PraticeRoom, WeaponRoom);
+
 
                 player.Location = WeaponRoom;
 
-                player.Inventory.Put(Portion);
+                player.Inventory.Put(Potion);
                 player.Inventory.Put(Bag);
                 Bag.Inventory.Put(Longsword);
                 Bag.Inventory.Put(Map);
                 Bag.Inventory.Put(Gem);
 
                 BotRoom.Inventory.Put(Bot);
-                WeaponRoom.Inventory.Put(ArmorTable);
+                WeaponRoom.Inventory.Put(Armor);
 
                 WeaponRoom.AddPath(WroomtoBroom);
                 WeaponRoom.AddPath(WroomtoProom);
                 PraticeRoom.AddPath(ProomtoFroom);
+                PraticeRoom.AddPath(ProomtoWroom);
+
 
 
                 Command c = new CommandProcesscer();
